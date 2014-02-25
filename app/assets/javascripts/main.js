@@ -67,7 +67,7 @@ function initializeVisia() {
 	        first.css('margin-top', '0px');
 	        current = 1;
 	    } else current++;
-	}, 2500);
+	}, 5500);
 
 	//SERVICES TOOLTIP
 	(function() {
