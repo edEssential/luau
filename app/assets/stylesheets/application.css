@@ -16,6 +16,7 @@
  *= require_animations
  *= require_shortcodes
  *= require_ruby-red
+ *= require_cms
  *= require_form
  *= require_tree .
  */
