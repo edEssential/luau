@@ -9,6 +9,8 @@ gem "auto_html"
 gem 'newrelic_rpm'
 gem 'devise'
 gem 'csv_builder'
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'

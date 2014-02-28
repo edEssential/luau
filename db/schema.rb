@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140228155147) do
+ActiveRecord::Schema.define(:version => 20140228161004) do
 
   create_table "artists", :force => true do |t|
     t.string   "name"
@@ -21,8 +21,12 @@ ActiveRecord::Schema.define(:version => 20140228155147) do
     t.text     "press1"
     t.text     "press2"
     t.text     "press3"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",           :null => false
+    t.datetime "updated_at",           :null => false
+    t.string   "mugshot_file_name"
+    t.string   "mugshot_content_type"
+    t.integer  "mugshot_file_size"
+    t.datetime "mugshot_updated_at"
   end
 
   create_table "contacts", :force => true do |t|
@@ -41,8 +45,12 @@ ActiveRecord::Schema.define(:version => 20140228155147) do
     t.text     "description"
     t.string   "buy_link"
     t.string   "release_date"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
+    t.datetime "created_at",            :null => false
+    t.datetime "updated_at",            :null => false
+    t.string   "packshot_file_name"
+    t.string   "packshot_content_type"
+    t.integer  "packshot_file_size"
+    t.datetime "packshot_updated_at"
   end
 
   create_table "users", :force => true do |t|
