@@ -1,3 +1,5 @@
+<% if controller.controller_name == 'home' %>
+
 <nav class="clearfix">
 
 	<!-- Logo -->
@@ -10,6 +12,14 @@
 		<div class="logo">
 			<%= link_to image_tag('logo.png'), root_path %>
 		</div>
+	<% end %>
+	
+	<% if user_signed_in? %>
+		<div class="userInfo">
+			<div>{ Logged in as <strong><%= current_user.email %></strong> }</div>
+			<div class="deviseLinks"><%= link_to 'Edit', edit_user_registration_path %> | <%= link_to 'Logout', destroy_user_session_path, method: :delete %></div>
+		</div>
+		<%= link_to "manage content", cms_path, class: "manageButton" %>
 	<% end %>
 
 	<!-- Mobile Nav Button -->
@@ -44,3 +54,7 @@
 
 </nav>
 <!-- End Navigation -->
+
+<% else %>
+	<div class="navigation-alt">&nbsp;</div>
+<% end %>

@@ -34,5 +34,82 @@
 //= require_tree .
 
 $(document).ready(function() {
+	
+	//// Preloader, hide all page content until window.load
+  	//$('.body').hide();
+	//$('.loadingGif').show();
+	
+	//// Launch all external links in _blank windows!!
+	$("a").click(function() {
+		link_host = this.href.split("/")[2];
+	    document_host = document.location.href.split("/")[2];
+
+	    if (link_host != document_host) {
+	      window.open(this.href);
+	      return false;
+	    }
+	});
+	
+	//// Contact form submission and callback
+	$( "#contact-submit" ).click(function() {
+		$(".contactTitle").fadeOut(500, function() {
+			$(this).html("Thanks for getting in touch!").fadeIn(1000);
+		 });
+	});
+	
+	//// Detect click from model? in CMS index view and generate correct mustache template to append to modal
+	$( ".cmsEdit" ).click(function() {
 		
+		var model = $(this).prev().prev('.modal-model-type').val();
+		var id = $(this).prev('.modal-object-id').val();
+		
+		if (model == "releases") {
+			$.ajax({
+				dataType: "json",
+				url: "http://localhost:3000/releases/send_object_via_ajax",
+		 		data: {id: id},
+				success: function(data) {
+					var release_content = SMT['release'](data);
+					$('#form-content').empty().append(release_content);
+				}
+			});
+		} else if (model == "videos") {
+			$.ajax({
+				dataType: "json",
+				url: "http://localhost:3000/videos/send_object_via_ajax",
+		 		data: {id: id},
+				success: function(data) {
+					var video_content = SMT['video'](data);
+					$('#form-content').empty().append(video_content);
+				}
+			});
+		} else if (model == "shows") {
+			$.ajax({
+				dataType: "json",
+				url: "http://localhost:3000/shows/send_object_via_ajax",
+		 		data: {id: id},
+				success: function(data) {
+					var show_content = SMT['show'](data);
+					$('#form-content').empty().append(show_content);
+				}
+			});
+		} else if (model == "contacts") {
+			$.ajax({
+				dataType: "json",
+				url: "http://localhost:3000/contacts/send_object_via_ajax",
+		 		data: {id: id},
+				success: function(data) {
+					var contact_content = SMT['contact'](data);
+					$('#form-content').empty().append(contact_content);
+				}
+			});
+		}
+	});
+	
 });
+
+//// Load page content once it has been preloaded
+//$(window).load(function() {
+//	$('.loadingGif').hide();
+  //	$('.body').fadeIn(300);
+//});

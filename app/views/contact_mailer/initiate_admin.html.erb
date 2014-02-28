@@ -1,0 +1,8 @@
+<div style="font-size:20px;font-weight:800;">Keith!</div><br/><br/>
+
+<em><%= @contact.name %></em> got in touch with you from your website from the below email address: 
+<div><%= @contact.email %></div><br/>
+
+<div>This is what <%= @contact.name.split(" ").first.titleize %> had to say;</div><br/>
+
+<div style="padding-top:20px;padding-left:50px;"><em><%= simple_format(@contact.user_message) %></em></div>

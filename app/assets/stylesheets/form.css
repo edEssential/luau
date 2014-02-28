@@ -1,0 +1,59 @@
+.formWrapper {
+	margin:50px 0px 50px 0px;
+	padding:40px;
+	float:left;
+	clear:both;
+	width:100%;
+	background-color:#f5f5f5;
+	border:2px solid;
+	border-radius:15px;
+}
+.formWrapper2 {
+	margin:40px 0px 20px 0px;
+	padding:20px;
+	float:left;
+	cear:both;
+	width:100%;
+	border:none;
+}
+#form-content {
+	min-height:300px;
+}
+
+.text-area, .text-areaArea {
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin-top:5px;
+    width: 25%;
+    height: 35px;
+    background: #202326;
+    -webkit-appearance: none;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #ffffff;
+}
+
+.text-areaArea {
+	height:300px;
+}
+
+.formText, .formTitle {
+	font-size:17px;
+	margin:10px 0px;
+}
+.marginUp {
+	margin-top:-60px;
+}
+.userInfo {
+	position:absolute;
+	margin:33px 0px 0px 400px;
+	color:#ffffff;
+}
+
+
+
+
+
+
