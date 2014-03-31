@@ -1,5 +1,5 @@
 class ArtistsController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:artist_show_via_ajax_call]
 
   def new
     @artist = Artist.new
@@ -16,6 +16,11 @@ class ArtistsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to cms_path }
     end
+  end
+  
+  def artist_show_via_ajax_call
+    @artist = Artist.find(params[:id])
+    render :json => @artist
   end
 
   def index

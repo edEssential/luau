@@ -15,7 +15,7 @@ function initializeVisia() {
 
 	//LOCAL SCROLL
 	jQuery('.navigation, .call-to-action').localScroll({
-		offset: -50
+		offset: 45
 	});
 
 	jQuery("#top").click(function () {
@@ -67,7 +67,7 @@ function initializeVisia() {
 	        first.css('margin-top', '0px');
 	        current = 1;
 	    } else current++;
-	}, 5500);
+	}, 2500);
 
 	//SERVICES TOOLTIP
 	(function() {
@@ -185,7 +185,7 @@ function initializeVisia() {
 			jQuery('#alert').hide();
 
  		jQuery('#submit')
-			.after('<img src="images/ajax-loader.gif" class="loader" />')
+			.after('<img src="assets/ajax-loader.gif" class="loader" />')
 			.attr('disabled','disabled');
 
 		jQuery.post(action, {

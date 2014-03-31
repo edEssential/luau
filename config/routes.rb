@@ -7,6 +7,8 @@ V1::Application.routes.draw do
   match "home/shortcodes" => 'home#shortcodes'
   match "home/blog" => 'home#blog'
   
+  match 'artists/artist_show_via_ajax_call' => 'artists#artist_show_via_ajax_call'
+  
   resources :cms
   resources :artists
   resources :releases
