@@ -18,5 +18,6 @@
  *= require_ruby-red
  *= require_cms
  *= require_form
+ *= require_newui
  *= require_tree .
  */

@@ -1,0 +1,32 @@
+<div class="cmsWrapper2">
+	<div class="releases">
+		<div class="divHeader">Contact admin</div>
+		<div class="tableWrapper">
+			<div class="tableContent">
+				<% if @contacts.count > 0 %>
+					<table width="100%">
+						<tr class="tableHeader">
+							<th>SET UP BY</th>
+							<th>EMAIL</th>
+							<th>CONTACT TEXT</th>
+						</tr>
+						<tr><hr class="ruler"/></tr>
+						<tr class="tableRow">
+							<td width="15%"><%= @admin.name %></td>
+							<td width="25%"><%= @admin.email %></td>
+							<td width="54%"><%= @admin.message_text %></td>
+							<td width="3%">
+						</tr>
+					</table>
+				<% else %>
+					<table width="100%"><tr class="tableRow empty"><td><em>YOU HAVEN'T SET UP THE ADMIN VIEW YET... DO SO BELOW ?!</em></td></tr></table>
+				<% end %>
+			</div>
+		</div>
+	</div>
+	<% if @contacts.count < 1 %>
+		<h6><%= link_to 'Create contact text', new_contact_path, :class => "darkButton2" %></h6>
+	<% else %>
+		<h6><%= link_to 'Download contacts list', contacts_xls_path, :class => "darkButton2" %></h6>
+	<% end %>
+</div>

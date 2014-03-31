@@ -310,14 +310,13 @@ nav {
 
 .ticker {
 	overflow: hidden;
-	height: 120px;
+	height: 109px;
 	vertical-align: baseline;
 	margin-top:-300px;
 }
 
 .ticker h1 {
-	margin-bottom: 0px;
-	height: 120px;
+	height: 100px;
     -webkit-transition: margin-top 1s ease-in-out;
     -moz-transition:    margin-top 1s ease-in-out;
     -o-transition:      margin-top 1s ease-in-out;
