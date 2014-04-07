@@ -14,5 +14,7 @@ V1::Application.routes.draw do
   resources :artists
   resources :releases
   resources :contacts
+  
+  match "contacts_xls" => 'cms#contacts_xls'
 
 end

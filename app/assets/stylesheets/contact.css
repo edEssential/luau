@@ -1,0 +1,40 @@
+.contactFormWrapper {height:200px;}
+.contactForm {margin:63px 0px -15px 4px !important;min-height:60px;}
+.contactEmail {float:left;}
+.contactName {float:right;}
+.contactMessage {float:left}
+.contactField, .contactFieldArea {width:100%;-moz-border-radius:5px;border-radius:5px;background-color:#202326;color:#becedf;height:60px;margin:2px 0px;font-size:18px;padding:0px 0px 0px 20px;border:0;}
+.contactFieldArea {height:220px;padding:20px 0px 0px 20px;}
+.button4 {
+	letter-spacing:0.1em;
+	margin-top	:10px;
+	padding: 9px 23px;
+	right:0px;
+	top:440px;
+	width:200px;
+	height:50px;
+	background:#f5f5f5;
+	font-family:"Open Sans", sans-serif;
+	border: none!important;
+	-moz-border-radius:5px;border-radius:5px;
+	display:inline-block;
+	color:#202326;
+}
+
+@media screen and (min-width: 959px) {
+	
+.button4 {
+	height:50px !important;
+	margin:0px;
+}
+  
+}
+
+@media screen and (max-width: 479px) {
+
+.button4 {
+	position:absolute;
+	top:560px; left:15%;
+}
+	
+}
