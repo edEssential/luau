@@ -1,5 +1,5 @@
 class ReleasesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user!, except: [:release_show_via_ajax_call]
 
   def new
     @release = Release.new
@@ -16,6 +16,11 @@ class ReleasesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to cms_path }
     end
+  end
+  
+  def release_show_via_ajax_call
+    @release = Release.find(params[:id])
+    render :json => @release
   end
 
   def index

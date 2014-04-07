@@ -1,0 +1,36 @@
+<!-- Begin Clients -->
+<section id="section5" class="black clearfix contactBlack">
+	<div class="content dark padded container">
+
+		<!-- Title -->
+		<div class="title grid-full" id="contactHeader">
+			<%# if @contacts.count > 0  %>
+				<h2 class="contactTitle"><%#= @admin.message_text %></h2>
+			<%# else %>
+				<h2>GO TO THE CMS TO SET UP THIS TITLE</h2>
+			<%# end %>
+			<span class="border"></span>
+		</div>
+		
+		<div class="contactFormWrapper">
+		
+		<div class="grid-full contactForm">	
+			<%#= form_for(@contact, remote: true) do |f| %>
+				<div class="contactEmail grid-half">
+	    			<%#= f.text_field :email, :placeholder => 'Your E-mail', :class => "contactField" %><br /><br />
+				</div>
+				<div class="contactName grid-half">
+	    			<%#= f.text_field :name, :placeholder => 'Your Name', :class => "contactField"  %><br /><br />
+				</div>
+				<div class="contactMessage grid-full">
+	    			<%#= f.text_area :user_message, :placeholder => 'Message', :class => "contactFieldArea" %><br /><br />
+				</div>
+	    		<div class="grid-full"><%#= f.submit "Send message", class: "button4", id: "contact-submit" %></div>
+			<%# end %>
+		</div>
+		
+		</div>
+		
+	</div>
+</section>
+<!-- End Clients -->

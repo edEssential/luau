@@ -6,7 +6,7 @@ a:hover { color: #d32a3b; }
 .button:hover { border: 1px solid #ffa593; }
 
 .desktop.navigation .nav-content a:hover, .desktop.navigation .nav-content a.active, .post-title a:hover, .cat-item a:hover, .widget-archive a:hover, .recentcomments a:hover, .widget-recent-entries a:hover, .comment-meta a:hover, .required  
-{ color: #d32a3b!important; }
+{ color: #ffffff!important;text-shadow: 0 0 1px #f5f5f5; }
 
 .gallery-next .bx-next:hover  { background: #ee3b16 url('../../images/blog/next.png') no-repeat; background-size: 22px 22px;}
 .gallery-prev .bx-prev:hover  { background: #ee3b16 url('../../images/blog/prev.png') no-repeat; background-size: 22px 22px;}
@@ -20,7 +20,7 @@ a:hover { color: #d32a3b; }
 .tabs ul li.active a {border-top: 2px solid #ee3b16;} 
 
 /* Content */
-.parallax.colored { background-color: #ee3b16; }
+.parallax.colored { background-color: #f1f1f1; }
 .list-dot { background: #ee3b16; }
 
 .projectlist a:hover .projectinfo { 

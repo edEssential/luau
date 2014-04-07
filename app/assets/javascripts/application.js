@@ -35,27 +35,48 @@ jQuery(document).ready(function() {
 	jQuery(".artistClick").click(function() {
 		
 		var id = jQuery(this).prev('.modal-object-id').val();
-		console.log(id);
 		
 		jQuery.ajax({
 			dataType: "json",
 			url: "./artists/artist_show_via_ajax_call",
 			data: {id: id},
 			success: function(data) {
-				var padder = document.getElementById('artistShow');
 				var artist_content = SMT['artistshow'](data);
-				jQuery('#artistShowWrapper').show(function(){
-					jQuery('#artistContent').empty().hide().append(artist_content).fadeIn(700);
-					padder.scrollIntoView(true);
-				});
+				jQuery(window).scrollTo('#section2', {duration:200, offset:45});
+				jQuery('#artistShowWrapper').fadeIn(750);
+				jQuery('#artistContent').empty().hide().append(artist_content).fadeIn(750);
 			}
 		});
 	});
-	//// Close release display on icon click
+	//// Close artist display on icon click
 	jQuery('#removeArtist').click(function() {
 		jQuery('#artistShowWrapper').fadeOut(500, function(){
 			jQuery("#artistShowWrapper").hide();
 			jQuery("#artistContent").empty();
+		});
+	});
+	
+	jQuery(".releaseClick").click(function() {
+		
+		var id = jQuery(this).prev('.modal-object-id').val();
+		
+		jQuery.ajax({
+			dataType: "json",
+			url: "./releases/release_show_via_ajax_call",
+			data: {id: id},
+			success: function(data) {
+				var release_content = SMT['releaseshow'](data);
+				jQuery(window).scrollTo('#section3', {duration:200, offset:45});
+				jQuery('#releaseShowWrapper').fadeIn(750);
+				jQuery('#releaseContent').empty().hide().append(release_content).fadeIn(750);
+			}
+		});
+	});
+	//// Close release display on icon click
+	jQuery('#removeRelease').click(function() {
+		jQuery('#releaseShowWrapper').fadeOut(500, function(){
+			jQuery("#releaseShowWrapper").hide();
+			jQuery("#releaseContent").empty();
 		});
 	});
 	

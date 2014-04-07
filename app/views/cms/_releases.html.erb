@@ -13,7 +13,7 @@
 						<% @releases.each do |r| %>
 							<tr class="tableRow">
 								<td width="22%"><%= r.title %></td>
-								<td width="72%"><%= r.buy_link %></td>
+								<td width="72%"><%= truncate (r.buy_link), length: 78 %></td>
 								<td width="3%">
 									<input type="hidden" value="releases" class="modal-model-type">
 									<input type="hidden" value=<%= r.id %> class="modal-object-id">

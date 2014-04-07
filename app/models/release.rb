@@ -4,6 +4,7 @@ class Release < ActiveRecord::Base
   has_attached_file :packshot, styles: {
      thumb: '100x100>',
      square: '200x200#',
+     rect: '310X205>',
      medium: '545x545>'
    }
    

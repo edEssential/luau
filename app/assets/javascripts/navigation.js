@@ -27,7 +27,7 @@ jQuery.noConflict();
 			navigation_links.removeClass("active");
 			active_link.addClass("active");
 		},
-		offset: '0%'
+		offset: '11%'
 		});
 
 		if ( windowWidth > 959 ) {

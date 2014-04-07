@@ -8,6 +8,7 @@ V1::Application.routes.draw do
   match "home/blog" => 'home#blog'
   
   match 'artists/artist_show_via_ajax_call' => 'artists#artist_show_via_ajax_call'
+  match 'releases/release_show_via_ajax_call' => 'releases#release_show_via_ajax_call'
   
   resources :cms
   resources :artists
