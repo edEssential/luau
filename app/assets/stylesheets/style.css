@@ -117,7 +117,7 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 /* =Buttons
 -------------------------------------------------------------- */
 
-.button, .manageButton {
+.button, .manageButton, .buttonNoBorder {
 	display: inline-block;
 	padding: 20px 55px;
 	font-size: 1em;
@@ -125,8 +125,8 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 	letter-spacing: 0.20em;
 	font-weight: 400;
 	border-radius: 3px;
-		-webkit-border-radius: 3px;
-		-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
 }
 .button2, .manageButton {
 	display: inline-block;
@@ -1269,6 +1269,8 @@ h6.artist {width:280px;margin:0px 0px 6px 24px;}
 .background {background-color:#ffffff;width:100%;}
 
 .releasesIndex {width:80%;margin-left:20%;text-align:left;}
+.releasesLoopInArtistShow {float:left;margin:-52px 0px 0px 200px;}
+.rliasIMG {margin-right:5px;}
 
 
 /* =Video

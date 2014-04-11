@@ -2,7 +2,7 @@
 
 	<div class="project-title grid-full">
 		<h4>{{name}}</h4>
-		<h6><em>{{website_url}}</em></h6>
+		<h6><em><a href="http://{{website}}" target="_blank">{{website}}</a></em></h6>
 	</div>
 
 	<div class="project-info clearfix">
@@ -10,8 +10,13 @@
 			<p>{{bio}}</p>
 		</div>
 		<div class="grid-full buyMe">
-			<a href="{{website_url}}" target="_blank" class="button">More...</a>
+			<a href="" target="_blank" class="buttonNoBorder">Releases...</a>
 		</div>
+	</div>
+	<div class="releasesLoopInArtistShow">
+		{{#releases}}
+			<img class="rliasIMG" src="{{.}}"/>
+		{{/releases}}
 	</div>
 
 </div>

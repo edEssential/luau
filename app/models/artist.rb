@@ -1,5 +1,6 @@
 class Artist < ActiveRecord::Base
   attr_accessible :name, :bio, :website_url, :release_date, :press1, :press2, :press3, :mugshot
+  has_many :releases
   
   has_attached_file :mugshot, styles: {
       thumb: '100x100>',

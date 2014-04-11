@@ -19,8 +19,11 @@ class ArtistsController < ApplicationController
   end
   
   def artist_show_via_ajax_call
-    @artist = Artist.find(params[:id])
-    render :json => @artist
+    artist = Artist.find(params[:id])
+    artist_releases = artist.releases
+    artist_releases_image = artist_releases.map {|ar| ar.packshot.url(:show)}
+    artist_show = { :name => artist.name, :website => artist.website_url, :bio => artist.bio, :releases => artist_releases_image }
+    render :json => artist_show
   end
 
   def index

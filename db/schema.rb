@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140228161004) do
+ActiveRecord::Schema.define(:version => 20140411091909) do
 
   create_table "artists", :force => true do |t|
     t.string   "name"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(:version => 20140228161004) do
     t.string   "packshot_content_type"
     t.integer  "packshot_file_size"
     t.datetime "packshot_updated_at"
+    t.integer  "artist_id"
   end
 
   create_table "users", :force => true do |t|

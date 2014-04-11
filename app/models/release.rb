@@ -1,10 +1,12 @@
 class Release < ActiveRecord::Base
   attr_accessible :artist, :title, :description, :buy_link, :release_date, :packshot
+  belongs_to :artist
   
   has_attached_file :packshot, styles: {
      thumb: '100x100>',
      square: '200x200#',
      rect: '310X205>',
+     show: '180X119>',
      medium: '545x545>'
    }
    
