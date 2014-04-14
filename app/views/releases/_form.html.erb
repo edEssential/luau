@@ -15,8 +15,11 @@
 				</div>
 			<% end %>	
 			<%= form_for(@release) do |f| %>
-				<%= f.label :artist, class: "formText" %><br/>
+				<%= f.label :artist_name, class: "formText" %><br/>
     			<%= f.text_field :artistname, class: 'email text-area' %><br /><br />
+				<%= f.label :link_release_to_which_artist, class: "formText" %><br/>
+				<%= f.label "(select blank if no link desired)", class: "formText2" %><br/><br/>
+    			<%= f.collection_select :artist_id, Artist.order(:name),:id,:name, include_blank: true %><br/><br/>
 				<%= f.label :title, class: "formText" %><br/>
 	    		<%= f.text_field :title, class: 'email text-area' %><br /><br />
 			 	<%= f.label :packshot, class: "formText"  %><br />
