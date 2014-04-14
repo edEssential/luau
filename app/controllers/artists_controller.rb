@@ -22,8 +22,7 @@ class ArtistsController < ApplicationController
     artist = Artist.find(params[:id])
     artist_releases = artist.releases
     artist_releases_image = artist_releases.map {|ar| ar.packshot.url(:show)}
-    release_link = 
-    artist_show = { :name => artist.name, :website => artist.website_url, :bio => artist.bio, :releases => artist_releases_image, :release_link =>  }
+    artist_show = { :name => artist.name, :website => artist.website_url, :bio => artist.bio, :releases => artist_releases_image }
     render :json => artist_show
   end
 
