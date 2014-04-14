@@ -42,7 +42,7 @@ jQuery(document).ready(function() {
 			data: {id: id},
 			success: function(data) {
 				var artist_content = SMT['artistshow'](data);
-				jQuery(window).scrollTo('#section2', {duration:200, offset:45});
+				jQuery(window).scrollTo('#section3', {duration:200, offset:45});
 				jQuery('#artistShowWrapper').fadeIn(750);
 				jQuery('#artistContent').empty().hide().append(artist_content).fadeIn(750);
 			}
