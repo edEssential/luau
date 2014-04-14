@@ -69,6 +69,11 @@ jQuery(document).ready(function() {
 				jQuery(window).scrollTo('#section3', {duration:200, offset:45});
 				jQuery('#releaseShowWrapper').fadeIn(750);
 				jQuery('#releaseContent').empty().hide().append(release_content).fadeIn(750);
+				if(data.hasOwnProperty("press1")) {
+					jQuery('.showHideReview').show();
+				} else {
+					jQuery('.showHideReview').hide();
+				}
 			}
 		});
 	});

@@ -1,5 +1,5 @@
 class Release < ActiveRecord::Base
-  attr_accessible :artistname, :title, :description, :buy_link, :release_date, :packshot, :artist_id
+  attr_accessible :artistname, :title, :description, :buy_link, :release_date, :packshot, :artist_id, :press1, :press2, :press3, :presssource1, :presssource2, :presssource3
   belongs_to :artist
   
   has_attached_file :packshot, styles: {

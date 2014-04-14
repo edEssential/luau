@@ -11,16 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140411143847) do
+ActiveRecord::Schema.define(:version => 20140414135717) do
 
   create_table "artists", :force => true do |t|
     t.string   "name"
     t.text     "bio"
     t.string   "website_url"
-    t.string   "release_date"
-    t.text     "press1"
-    t.text     "press2"
-    t.text     "press3"
     t.datetime "created_at",           :null => false
     t.datetime "updated_at",           :null => false
     t.string   "mugshot_file_name"
@@ -52,6 +48,12 @@ ActiveRecord::Schema.define(:version => 20140411143847) do
     t.integer  "packshot_file_size"
     t.datetime "packshot_updated_at"
     t.integer  "artist_id"
+    t.string   "press1"
+    t.string   "press2"
+    t.string   "press3"
+    t.string   "presssource1"
+    t.string   "presssource2"
+    t.string   "presssource3"
   end
 
   create_table "users", :force => true do |t|

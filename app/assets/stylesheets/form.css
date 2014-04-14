@@ -20,12 +20,11 @@
 	min-height:300px;
 }
 
-.text-area, .text-areaArea {
+.text-area, .text-areaArea, .text-areaPress, .text-areaBio {
     border: none;
     outline: none;
     padding: 10px;
     margin-top:5px;
-    width: 25%;
     height: 35px;
     background: #202326;
     -webkit-appearance: none;
@@ -36,7 +35,16 @@
 }
 
 .text-areaArea {
-	height:300px;
+	min-height:300px;
+}
+.text-areaPress {
+	width:500px;
+	height:100px;
+}
+.text-areaBio {
+	width:820px;
+	height:400px;
+	line-height:20px!important;
 }
 
 .formText, .formTitle {
@@ -52,6 +60,11 @@
 	margin:33px 0px 0px 400px;
 	color:#ffffff;
 }
+.review {margin:12px 0px 0px 2%;float:left;}
+.review2 {margin:24px 0px 0px 2%;float:left;}
+.review3 {margin:0px 0px 0px 2%;float:left;}
+.reviewMargin {width:83%;float:right;margin:0px 10% 30px 5px;}
+.reviewMargin2 {width:81%;float:right;margin:0px 3% 30px 5px;}
 
 
 

@@ -1,4 +1,4 @@
-<section class="parallax-bg2 parallax colored clearfix marginUp">
+<section class="parallax-bg2 parallax colored clearfix marginUp formPage">
 	<div class="content dark padded container content3">
 		
 		<div class="title grid-full">
@@ -15,23 +15,37 @@
 				</div>
 			<% end %>	
 			<%= form_for(@artist) do |f| %>
-				<%= f.label :name, class: "formText" %><br/>
-    			<%= f.text_field :name, class: 'email text-area' %><br /><br />
-				<%= f.label :bio, class: "formText" %><br/>
-	    		<%= f.text_area :bio, class: 'text-areaArea' %><br /><br />
-			 	<%= f.label :mugshot, class: "formText"  %><br />
-			 	<%= f.file_field :mugshot, class: 'email text-area'  %><br /><br />
-				<%= f.label :Website_URL, class: "formText" %><br />
-	    		<%= f.text_field :website_url, class: 'email text-area' %><br /><br />
-				<%= f.label :release_date?, class: "formText" %><br />
-	    		<%= f.text_field :release_date, class: 'email text-area'  %><br /><br />
-				<%= f.label :Press_clipping_1, class: "formText" %><br/>
-	    		<%= f.text_area :press1, class: 'text-areaArea' %><br /><br />
-				<%= f.label :Press_clipping_2, class: "formText" %><br/>
-	    		<%= f.text_area :press2, class: 'text-areaArea' %><br /><br />
-				<%= f.label :Press_clipping_3, class: "formText" %><br/>
-	    		<%= f.text_area :press3, class: 'text-areaArea' %><br /><br />
-	    		<%= f.submit %>
+				<div class="accordion" rel="0">
+					<div class="accordion-title darkText">
+						<h5><span></span><a href="#">Artist Info.</a></h5>
+					</div>
+					<div class="accordion-inner">
+						<div class="lefter">
+							<%= f.label :name, class: "formText" %><br/>
+		    				<%= f.text_field :name, class: 'email text-area' %>
+						</div>
+						<div class="lefter">
+							<%= f.label :Website_url, class: "formText" %><br/>
+				    		<%= f.text_field :website_url, class: 'email text-area' %>
+						</div>
+						<div class="lefter">
+						 	<%= f.label :mugshot, class: "formText"  %><br/><div class="blank"></div>
+						 	<%= f.file_field :mugshot %>
+						</div>
+					</div>
+					<div class="accordion-title darkText">
+						<h5><span></span><a href="#">Biography.</a></h5>
+					</div>
+					<div class="accordion-inner">
+						<div class="lefter2">
+							<%= f.label :bio, class: "formText" %><br />
+				    		<%= f.text_area (:bio), class: 'text-areaBio' %>
+						</div>
+					</div>
+				</div>
+				<div>
+	    		<%= f.submit "Save release", class: "button1" %>
+				</div>
 			<% end %>
 		</div>
 

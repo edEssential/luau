@@ -19,8 +19,15 @@ class ReleasesController < ApplicationController
   end
   
   def release_show_via_ajax_call
-    @release = Release.find(params[:id])
-    render :json => @release
+    release = Release.find(params[:id])
+    press = release.press1.to_s
+    if press == ""
+      release_show = { :id => release.id, :artistname => release.artistname, :title => release.title, :description => release.description, :buy_link => release.buy_link }
+      render :json => release_show
+    else
+      release_show = { :id => release.id, :artistname => release.artistname, :title => release.title, :description => release.description, :buy_link => release.buy_link, :press1 => release.press1, :presssource1 => release.presssource1 }
+      render :json => release_show
+    end
   end
 
   def index

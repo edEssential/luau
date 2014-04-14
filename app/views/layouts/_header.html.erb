@@ -35,19 +35,19 @@
     <div class="navigation">
 		<ul class="nav-content">
 			<% if controller.controller_name == 'home' && controller.action_name == 'index' %>
-				<li><a href="#section2">Artists</a></li>
+				<li><a href="#section2">News</a></li>
+			<% else %>
+				<li><%= link_to 'News', "#{root_path}" + "#section4" %></li>
+			<% end %>
+			<% if controller.controller_name == 'home' && controller.action_name == 'index' %>
+				<li><a href="#section3">Artists</a></li>
 			<% else %>
 				<li><%= link_to 'Artists', "#{root_path}" + "#section2" %></li>
 			<% end %>
 			<% if controller.controller_name == 'home' && controller.action_name == 'index' %>
-				<li><a href="#section3">Releases</a></li>
+				<li><a href="#section4">Releases</a></li>
 			<% else %>
 				<li><%= link_to 'Releases', "#{root_path}" + "#section3" %></li>
-			<% end %>
-			<% if controller.controller_name == 'home' && controller.action_name == 'index' %>
-				<li><a href="#section4">News</a></li>
-			<% else %>
-				<li><%= link_to 'News', "#{root_path}" + "#section4" %></li>
 			<% end %>
 			<% if controller.controller_name == 'home' && controller.action_name == 'index' %>
 				<li><a href="#section5">Contact</a></li>

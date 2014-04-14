@@ -109,6 +109,7 @@ h6 {
 
 .dark p, .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 { color: #fff; }
 .dark a { color: #fff!important; }
+.darkText a {color: #3f3f3f!important;text-align:left;}
 
 /* Links */
 a, a:visited { font-weight: 400; text-decoration: none; }
@@ -117,7 +118,7 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 /* =Buttons
 -------------------------------------------------------------- */
 
-.button, .manageButton, .buttonNoBorder {
+.button, .manageButton, .buttonNoBorder, .button1 {
 	display: inline-block;
 	padding: 20px 55px;
 	font-size: 1em;
@@ -128,6 +129,7 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 }
+.button1 {float:left;margin-top:25px;}
 .button2, .manageButton {
 	display: inline-block;
 	padding: 20px 55px;
@@ -315,7 +317,8 @@ nav {
 /* =Hero
 -------------------------------------------------------------- */
 
-.hero { text-align: center; background-image:url(../assets/hero.jpg);background-size: cover; }
+.hero { text-align: center; background-image:url(../assets/hero.jpg);background-size: cover;background-attachment: fixed;background-position: 50% 0; }
+.hero2 { text-align: center; background-image:url(../assets/parallax-bg3.png);background-size: cover;background-attachment: fixed;background-position: 50% 0; }
 .hero .content { padding-top: 0px; }
 
 .ticker {
@@ -1259,6 +1262,12 @@ ul.releasesShow li, ul.releaseColor li {
 	*display: inline;
 	*zoom: 1;
 }
+.blank {height:10px!important;}
+.lefter, .lefter2, .lefter3, .lefter5 {float:left;width:190px;margin:0px 15px 0px 0px;}
+.lefter2, .lefter3 {width:310px;}
+.lefter4 {clear:both;}
+.lefter5 {width:500px;}
+.formPage {height:1100px;}
 
 ul.releasesShow li:nth-child(1),
 ul.releasesShow li:nth-child(4),

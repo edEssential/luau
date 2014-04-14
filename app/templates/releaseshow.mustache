@@ -1,7 +1,7 @@
 <div id="ajaxpage" class="container">
 
 	<div class="project-title grid-full">
-		<h4>{{artist}}</h4>
+		<h4>{{artistname}}</h4>
 		<h6><em>{{title}}</em></h6>
 	</div>
 
@@ -9,8 +9,8 @@
 		<div class="grid-full">
 			<p>{{description}}</p>
 		</div>
-		<div class="grid-full">
-			<div class="review"><img src="assets/quotes.png"><em>{{press1}}</em></div>
+		<div class="grid-full showHideReview">
+			<div class="review"><img src="assets/quotes.png"><div class="reviewMargin"><em>{{press1}}</em><strong> - {{presssource1}}</strong></div></div>
 		</div>
 		<div class="grid-full buyMe">
 			<a href="{{buy_link}}" target="_blank" class="button">Buy...</a>
