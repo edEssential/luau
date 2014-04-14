@@ -319,6 +319,7 @@ nav {
 
 .hero { text-align: center; background-image:url(../assets/hero.jpg);background-size: cover;background-attachment: fixed;background-position: 50% 0; }
 .hero2 { text-align: center; background-image:url(../assets/parallax-bg3.png);background-size: cover;background-attachment: fixed;background-position: 50% 0; }
+.hero3 { text-align:left; background-image:url(../assets/parallax-bg3.png);background-size: cover;background-attachment: fixed;background-position: 50% 0; }
 .hero .content { padding-top: 0px; }
 
 .ticker {
