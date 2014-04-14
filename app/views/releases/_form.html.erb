@@ -1,5 +1,5 @@
 <section class="parallax-bg2 parallax colored clearfix marginUp">
-	<div class="content dark padded container">
+	<div class="content dark padded container content3">
 		
 		<div class="title grid-full">
 			<h2>Add/edit your release content here</h2>
@@ -16,7 +16,7 @@
 			<% end %>	
 			<%= form_for(@release) do |f| %>
 				<%= f.label :artist, class: "formText" %><br/>
-    			<%= f.text_field :artist, class: 'email text-area' %><br /><br />
+    			<%= f.text_field :artistname, class: 'email text-area' %><br /><br />
 				<%= f.label :title, class: "formText" %><br/>
 	    		<%= f.text_field :title, class: 'email text-area' %><br /><br />
 			 	<%= f.label :packshot, class: "formText"  %><br />

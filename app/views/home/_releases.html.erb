@@ -22,7 +22,7 @@
 		
 		<div class="grid-full releasesIndex">
 		
-			<ul class="releasesShow" id="releaselist">
+			<ul class="releasesShow grid-full" id="releaselist">
 				<% @releases.each do |r| %>
 					<li class="release">
 						<input type="hidden" value=<%= r.id %> class="modal-object-id">
@@ -30,7 +30,7 @@
 							<div class="packshot"><%= image_tag r.packshot.url(:rect, :alt => "thumbnail") %></div>
 							<ul class="releaseColor">
 								<li class="releaseUnder">
-									<h4 class="artist"><%= r.artist %></h4>
+									<h4 class="artist"><%= r.artistname %></h4>
 									<h6 class="artist"><em><%= r.title %></em></h6>
 								</li>
 							</ul>

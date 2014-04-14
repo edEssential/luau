@@ -140,6 +140,7 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 	-moz-border-radius: 5px;
 	background-color:rgba(0,0,0,0.7);
 }
+.buttonNoBorder {margin-left:0px;margin-right:0px;padding-left:0px;padding-right:0px;padding-bottom:6px;border-bottom:1px dotted #fbb1b9;}
 .manageButton:hover { background: rgba(255, 255, 255, 0.9); filter: alpha(opacity=50); }
 .manageButton {position:absolute;margin:30px 0px 0px 25px;background-color:rgba(255,255,255,0.6);height:40px;padding:10px 55px;}
 .dark .button { border: 1px solid #fff!important; }
@@ -170,6 +171,7 @@ a, a:visited { font-weight: 400; text-decoration: none; }
 
 .content { padding-top:180px; text-align: center; }
 .content2 { padding-top:180px; }
+.content3 {padding-top:80px;}
 .content.padded { padding-bottom: 100px; }
 
 .contactBlack {background-color:#060606;}
@@ -1246,8 +1248,10 @@ footer { width: 100%; background: #060606;}
 	        user-select: none;
 }
 
-.releasesShow {margin:60px 0px 120px 0px;}
-
+.releasesShow {width:75.3%;margin:60px 0px 120px 12%;background-color:#;}
+.release {background-color:#ffffff;}
+.packshot {width:100.06%;}
+.packshot img {width:100%;}
 ul.releasesShow li, ul.releaseColor li {
 	display: inline-block;
 	vertical-align: top;
@@ -1256,20 +1260,31 @@ ul.releasesShow li, ul.releaseColor li {
 	*zoom: 1;
 }
 
-ul.releaseColor li {
-	text-align:left;
-	width:12px;
-	background-color:rgba(211,42,59,0.6);
+ul.releasesShow li:nth-child(1),
+ul.releasesShow li:nth-child(4),
+ul.releasesShow li:nth-child(7){
+	width:31%;margin:12px 1.2% 24px 0.7%;
+}
+ul.releasesShow li:nth-child(2),
+ul.releasesShow li:nth-child(5),
+ul.releasesShow li:nth-child(8){
+	width:31%;margin:12px 1.2% 24px 1.2%;
+}
+ul.releasesShow li:nth-child(3),
+ul.releasesShow li:nth-child(6),
+ul.releasesShow li:nth-child(9){
+	width:31%;margin:12px 0% 24px 1.2%;
 }
 
-.release {width:310px;margin:12px 12px 24px 12px;background-color:#ffffff;}
-h4.artist {width:280px;margin:6px 0px 4px 24px;}
-h6.artist {width:280px;margin:0px 0px 6px 24px;}
+.releaseColor {text-align:left;width:12px;height:48px;background-color:rgba(211,42,59,0.6);}
 
-.background {background-color:#ffffff;width:100%;}
+h4.artist {width:280px;margin:-5px 0px 4px 24px;}
+h6.artist {width:280px;margin:-1px 0px 6px 24px;}
 
-.releasesIndex {width:80%;margin-left:20%;text-align:left;}
-.releasesLoopInArtistShow {float:left;margin:-52px 0px 0px 200px;}
+.background {width:100%;}
+
+.releasesIndex {width:80%;margin-left:10%;text-align:left;background-color:#;}
+.releasesLoopInArtistShow {float:left;margin:-38px 0px 0px 200px;}
 .rliasIMG {margin-right:5px;}
 
 
@@ -1343,6 +1358,9 @@ h6.artist {width:280px;margin:0px 0px 6px 24px;}
 	.tooltip { cursor: pointer; }
 	.hero-video { background: url(../video/visia-video-poster.jpg) no-repeat; background-size: cover; background-position: top center;}
 	#big-video-wrap { display: none; }
+	
+	.releasesShow {width:94%;margin:60px 0px 120px 3%;}
+	.releasesIndex {width:100%;margin-left:0%;text-align:left;}
 }
 
 /* Tablet Portrait Size */
@@ -1366,6 +1384,22 @@ h6.artist {width:280px;margin:0px 0px 6px 24px;}
 	.project-info { border-bottom: none; }
 	.tooltip { width: 150%; left: 5%; margin-left: 0; }
 	.pull-left .tooltip { left: -55%;}
+}
+
+@media (max-width:560px) {
+	.releasesShow {width:100%;margin:60px 0px 120px 0%;}
+
+	ul.releasesShow li:nth-child(1),
+	ul.releasesShow li:nth-child(2),
+	ul.releasesShow li:nth-child(3),
+	ul.releasesShow li:nth-child(4),
+	ul.releasesShow li:nth-child(5),
+	ul.releasesShow li:nth-child(6),
+	ul.releasesShow li:nth-child(7),
+	ul.releasesShow li:nth-child(8),
+	ul.releasesShow li:nth-child(9){
+		width:100%;margin:12px 0% 12px 0%;
+	}
 }
 
 
