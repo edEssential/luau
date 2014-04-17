@@ -20,74 +20,68 @@
 						<h5><span></span><a href="#">Product Info.</a></h5>
 					</div>
 					<div class="accordion-inner">
-						<div class="lefter">
-							<%= f.label :artist_name, class: "formText" %><br/>
-		    				<%= f.text_field :artistname, class: 'email text-area' %>
-						</div>
-						<div class="lefter">
-							<%= f.label :title, class: "formText" %><br/>
-				    		<%= f.text_field :title, class: 'email text-area' %>
-						</div>
-						<div class="lefter">
-							<%= f.label :link_release_to_artist?, class: "formText" %><br/><div class="blank"></div>
-			    			<%= f.collection_select :artist_id, Artist.order(:name),:id,:name, include_blank: true %>
-						</div>
-						<div class="lefter">
-						 	<%= f.label :packshot, class: "formText"  %><br/><div class="blank"></div>
-						 	<%= f.file_field :packshot %>
-						</div>
+						<table style="margin-left:-20px;">
+							<tr>
+								<td><%= f.label :artist_name, class: "formText" %></td>
+								<td><%= f.label :title, class: "formText" %></td>
+								<td><%= f.label :link_to_artist?, class: "formText" %></td>
+								<td><%= f.label 'Packshot (310px X 205px)', class: "formText"  %></td>
+							</tr>
+							<tr>
+								<td><%= f.text_field :artistname, class: 'email text-area' %></td>
+								<td><%= f.text_field :title, class: 'email text-area' %></td>
+								<td><%= f.collection_select :artist_id, Artist.order(:name),:id,:name, include_blank: true %></td>
+								<td><%= f.file_field :packshot %></td>
+							</tr>
+						</table>
 					</div>
 					<div class="accordion-title darkText">
 						<h5><span></span><a href="#">Sales Info.</a></h5>
 					</div>
 					<div class="accordion-inner">
-						<div class="lefter2">
-							<%= f.label :description, class: "formText" %><br />
-				    		<%= f.text_area :description, class: 'text-areaArea' %>
-						</div>
-						<div class="lefter">
-							<%= f.label :URL, class: "formText" %><br />
-				    		<%= f.text_field :buy_link, class: 'email text-area' %>
-						</div>
-						<div class="lefter">
-							<%= f.label :release_date?, class: "formText" %><br />
-			    			<%= f.text_field :release_date, class: 'email text-area'  %>
-						</div>
+						<table style="margin-left:0px;">
+							<tr>
+								<td><%= f.label :description, class: "formText" %></td>
+								<td><%= f.label :URL, class: "formText" %></td>
+								<td><%= f.label :release_date?, class: "formText" %></td>
+							</tr>
+							<tr>
+								<td><%= f.text_area :description, class: 'text-areaArea' %></td>
+								<td style="vertical-align:top"><%= f.text_field :buy_link, class: 'email text-area' %></td>
+								<td style="vertical-align:top"><%= f.text_field :release_date, class: 'email text-area'  %></td>
+							</tr>
+						</table>
 					</div>
 					<div class="accordion-title darkText">
 						<h5><span></span><a href="#">Press</a></h5>
 					</div>
 					<div class="accordion-inner">
-						<div class="lefter4">
-							<div class="lefter5">
-								<%= f.label :Press_clipping_1, class: "formText" %><br/>
-					    		<%= f.text_area :press1, class: 'text-areaPress' %>
-							</div>
-							<div class="lefter3">
-								<%= f.label :Source, class: "formText" %><br/>
-					    		<%= f.text_area :presssource1, class: 'text-area' %>
-							</div>
-						</div>
-						<div class="lefter4">
-							<div class="lefter5">
-								<%= f.label :Press_clipping_2, class: "formText" %><br/>
-					    		<%= f.text_area :press2, class: 'text-areaPress' %>
-							</div>
-							<div class="lefter3">
-								<%= f.label :Source, class: "formText" %><br/>
-					    		<%= f.text_area :presssource2, class: 'text-area' %>
-							</div>
-						</div>
-						<div class="lefter4">
-							<div class="lefter5">
-								<%= f.label :Press_clipping_3, class: "formText" %><br/>
-					    		<%= f.text_area :press3, class: 'text-areaPress' %>
-							</div>
-							<div class="lefter3">
-								<%= f.label :Source, class: "formText" %><br/>
-					    		<%= f.text_area :presssource3, class: 'text-area' %>
-							</div>
-						</div>
+						<table style="margin-left:0px;">
+							<tr>
+								<td><%= f.label :Press_clipping_1, class: "formText" %></td>
+								<td><%= f.label :Source, class: "formText" %></td>
+							</tr>
+							<tr>
+								<td><%= f.text_area :press1, class: 'text-areaPress' %></td>
+								<td style="vertical-align:top"><%= f.text_area :presssource1, class: 'text-area' %></td>
+							</tr>
+							<tr>
+								<td><%= f.label :Press_clipping_2, class: "formText" %></td>
+								<td><%= f.label :Source, class: "formText" %></td>
+							</tr>
+							<tr>
+								<td><%= f.text_area :press2, class: 'text-areaPress' %></td>
+								<td style="vertical-align:top"><%= f.text_area :presssource2, class: 'text-area' %></td>
+							</tr>
+							<tr>
+								<td><%= f.label :Press_clipping_3, class: "formText" %></td>
+								<td><%= f.label :Source, class: "formText" %></td>
+							</tr>
+							<tr>
+								<td><%= f.text_area :press3, class: 'text-areaPress' %></td>
+								<td style="vertical-align:top"><%= f.text_area :presssource3, class: 'text-area' %></td>
+							</tr>
+						</table>
 					</div>
 				</div>
 				<div>

@@ -1263,11 +1263,7 @@ ul.releasesShow li, ul.releaseColor li {
 	*display: inline;
 	*zoom: 1;
 }
-.blank {height:10px!important;}
-.lefter, .lefter2, .lefter3, .lefter5 {float:left;width:190px;margin:0px 15px 0px 0px;}
-.lefter2, .lefter3 {width:310px;}
-.lefter4 {clear:both;}
-.lefter5 {width:500px;}
+td {padding:0px 20px 2px 0px;}
 .formPage {height:1100px;}
 
 ul.releasesShow li:nth-child(1),

@@ -20,27 +20,31 @@
 						<h5><span></span><a href="#">Artist Info.</a></h5>
 					</div>
 					<div class="accordion-inner">
-						<div class="lefter">
-							<%= f.label :name, class: "formText" %><br/>
-		    				<%= f.text_field :name, class: 'email text-area' %>
-						</div>
-						<div class="lefter">
-							<%= f.label :Website_url, class: "formText" %><br/>
-				    		<%= f.text_field :website_url, class: 'email text-area' %>
-						</div>
-						<div class="lefter">
-						 	<%= f.label :mugshot, class: "formText"  %><br/><div class="blank"></div>
-						 	<%= f.file_field :mugshot %>
-						</div>
+						<table style="margin-left:30px;">
+							<tr>
+								<td><%= f.label :name, class: "formText" %></td>
+								<td><%= f.label :Website_url, class: "formText" %></td>
+								<td><%= f.label 'Mugshot (545px X 545px)', class: "formText"  %></td>
+							</tr>
+							<tr>
+								<td><%= f.text_field :name, class: 'email text-area' %></td>
+								<td><%= f.text_field :website_url, class: 'email text-area' %></td>
+								<td><%= f.file_field :mugshot %></td>
+							</tr>
+						</table>
 					</div>
 					<div class="accordion-title darkText">
 						<h5><span></span><a href="#">Biography.</a></h5>
 					</div>
 					<div class="accordion-inner">
-						<div class="lefter2">
-							<%= f.label :bio, class: "formText" %><br />
-				    		<%= f.text_area (:bio), class: 'text-areaBio' %>
-						</div>
+						<table>
+							<tr>
+								<td><%= f.label :bio, class: "formText" %></td>
+							</tr>
+							<tr>
+								<td><%= f.text_area (:bio), class: 'text-areaBio' %></td>
+							</tr>
+						</table>
 					</div>
 				</div>
 				<div>

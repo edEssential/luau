@@ -31,6 +31,7 @@
 	-moz-border-radius: 3px;
 	border-radius: 3px;
 	margin-bottom: 10px;
+	width:100%;
 }
 
 .accordion-title h5 { margin: 0; }
