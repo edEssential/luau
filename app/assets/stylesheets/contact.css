@@ -31,10 +31,11 @@
 }
 
 @media screen and (max-width: 479px) {
-
+.contactFormWrapper {height:470px;}
 .button4 {
 	position:absolute;
-	top:560px; left:15%;
+	top:510px;
+	width:40%;margin-right:30%;
 }
 	
 }

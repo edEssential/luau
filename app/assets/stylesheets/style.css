@@ -1317,6 +1317,9 @@ h6.artist {width:280px;margin:-1px 0px 6px 24px;}
 .transparent{-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
 .vjs-big-play-button{display:none !important;}
 
+.topMe {width:45%!important;margin:2.5%!important;float:left;}
+.bottomMe {width:45%!important;margin:2.5%!important;float:left;}
+
 
 
 /* =Media
@@ -1347,8 +1350,6 @@ h6.artist {width:280px;margin:-1px 0px 6px 24px;}
 	.nav-button { display: block; }
 	.navigation { display: none; }
 	.parallax { background-size: cover; background-attachment: scroll; background-position: top center!important; }
-	.content { padding-top: 50px; } 
-	.content.padded { padding-bottom: 50px; }
 	.icons .overview { width: 33.3333333333%; margin-bottom: 30px; }
 	.icon { cursor: pointer; }
 	.projectlist li { width: 50%; }
@@ -1383,6 +1384,8 @@ h6.artist {width:280px;margin:-1px 0px 6px 24px;}
 	.filtering li { margin-bottom: 20px; }
 	.value { padding-top: 35px; }
 	.subscribe input.submit, .subscribe input.text { width: 100%; margin-left: 0;}
+	.topMe {width:90%!important;margin-left:5%!important;float:left;clear:both;}
+	.bottomMe {width:90%!important;margin:5% 5% 0% 5%!important;float:left;clear:both;}
 }
 
 /* Mobile Landscape Size */
@@ -1458,5 +1461,4 @@ only screen and (                min-resolution: 2dppx) {
 	.notification.error p  { background: url(../assets/icons/cross@2x.png) no-repeat; background-size: 26px 26px;}
 	.project-gallery-next .bx-next  {  background: #fff url('../assets/icons/project-gallery-next@2x.png') no-repeat center center; background-size: 22px 22px; }
 	.project-gallery-prev .bx-prev  {  background: #fff url('../assets/icons/project-gallery-prev@2x.png') no-repeat center center; background-size: 22px 22px; }
-
 }
