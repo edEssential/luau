@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140417225213) do
+ActiveRecord::Schema.define(:version => 20140417230409) do
 
   create_table "artists", :force => true do |t|
     t.string   "name"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(:version => 20140417225213) do
   create_table "contacts", :force => true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "user_message"
+    t.text     "user_message"
     t.text     "message_text"
     t.string   "thanks_text"
     t.datetime "created_at",   :null => false
