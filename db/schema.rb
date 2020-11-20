@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(:version => 20140417230409) do
   create_table "releases", :force => true do |t|
     t.string   "artistname"
     t.string   "title"
-    t.string   "description"
+    t.text     "description"
     t.string   "buy_link"
     t.string   "release_date"
     t.datetime "created_at",            :null => false

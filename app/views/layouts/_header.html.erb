@@ -6,11 +6,11 @@
 	
 	<% if controller.controller_name == 'home' && controller.action_name == 'index' %>
 		<div class="logo">
-			<a id="top" href="#"><%= image_tag('logo.png') %></a>
+			<a id="top" href="#"><%= image_tag('LRNew.png') %></a>
 		</div>
 	<% else %>
 		<div class="logo">
-			<%= link_to image_tag('logo.png'), root_path %>
+			<%= link_to image_tag('LRNew.png'), root_path %>
 		</div>
 	<% end %>
 	
@@ -35,9 +35,9 @@
     <div class="navigation">
 		<ul class="nav-content">
 			<% if controller.controller_name == 'home' && controller.action_name == 'index' %>
-				<li><a href="#section2">News</a></li>
+				<!--<li><a href="#section2">News</a></li>-->
 			<% else %>
-				<li><%= link_to 'News', "#{root_path}" + "#section4" %></li>
+				<li><%#= link_to 'News', "#{root_path}" + "#section4" %></li>
 			<% end %>
 			<% if controller.controller_name == 'home' && controller.action_name == 'index' %>
 				<li><a href="#section3">Artists</a></li>
